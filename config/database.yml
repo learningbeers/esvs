@@ -1,0 +1,24 @@
+
+default: &default
+  adapter: postgresql
+  pool: 5
+  
+
+development:
+  adapter: postgresql
+  encoding: SQL_ASCII
+  database: esvs_development
+  pool: 5
+  username: ubuntu
+  password: password
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: esvs_test
+
+production:
+  <<: *default
+  database: evs_production
