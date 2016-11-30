@@ -1,5 +1,6 @@
 class BrandsController < ApplicationController
   before_action :set_brand, only: [:show, :edit, :update, :destroy]
+  autocomplete :brand, :brandname
 
   # GET /brands
   # GET /brands.json

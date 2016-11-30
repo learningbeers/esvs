@@ -1,0 +1,12 @@
+<%= simple_form_for(@model) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :modelname %>
+    <%= f.input :brand_id, :url => autocomplete_brand_brandname_brands_path, :as => :autocomplete, :id_element => '#model_brand_id', :display_value => :brandname %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
